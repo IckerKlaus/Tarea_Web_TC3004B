@@ -1,0 +1,47 @@
+/* Reset basico y configuracion general */
+* {
+    margin: 0;                 /* Elimina margenes por defecto */
+    padding: 0;                /* Elimina rellenos por defecto */
+    box-sizing: border-box;    /* Incluye padding y borde en el tamano total */
+    font-family: Arial, sans-serif; /* Fuente base de la pagina */
+}
+
+/* Estilos del cuerpo de la pagina */
+body {
+    background-color: #9ACD32; /* Color de fondo verde */
+    padding: 2.5rem;          /* Espacio interno alrededor del contenido */
+}
+
+/* Titulo principal de la pagina */
+h1 {
+    text-align: center;        /* Centra el texto horizontalmente */
+    margin-bottom: 1.875rem;  /* Espacio debajo del titulo */
+}
+
+/* Contenedor que agrupa las cajas */
+.container {
+    display: flex;            /* Activa Flexbox */
+    justify-content: center;  /* Centra las cajas horizontalmente */
+    gap: 1.25rem;             /* Espacio entre cada caja */
+}
+
+/* Cajas de informacion */
+.box {
+    background-color: white;  /* Fondo blanco para contraste */
+    width: 15.625rem;         /* Ancho fijo de la caja */
+    height: 15.625rem;        /* Alto fijo de la caja */
+    padding: 0.9375rem;       /* Espacio interno del contenido */
+    border: 0.0625rem solid #ccc; /* Borde gris claro */
+    border-radius: 0.375rem;  /* Bordes ligeramente redondeados */
+    text-align: center;       /* Centra el contenido de texto */
+}
+
+/* Titulos dentro de las cajas */
+.box h2 {
+    margin-bottom: 0.625rem;  /* Espacio entre el titulo y el texto */
+}
+
+/* Texto dentro de las cajas */
+.box p {
+    font-size: 0.875rem;      /* Tamaño de letra mas pequeño */
+}

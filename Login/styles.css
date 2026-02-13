@@ -1,0 +1,50 @@
+/* Reset basico y configuracion general */
+* {
+    margin: 0;                 /* Elimina margenes por defecto */
+    padding: 0;                /* Elimina rellenos por defecto */
+    box-sizing: border-box;    /* Incluye padding y borde en el tamano total */
+    font-family: Arial, sans-serif; /* Fuente base de la pagina */
+}
+
+/* Estilos del cuerpo de la pagina */
+body {
+    height: 100vh;             /* Hace que el body ocupe toda la altura visible de la pantalla */
+    background-color: #f2f2f2; /* Aplica un color de fondo */
+    display: flex;             /* Activa Flexbox */
+    justify-content: center;   /* Centra el contenido horizontalmente */
+    align-items: center;       /* Centra el contenido verticalmente */
+}
+
+/* Caja que contiene el formulario de login */
+.login-box {
+    background-color: white;   /* Fondo blanco para contraste */
+    width: 18.75rem;           /* Ancho fijo de la caja */
+    padding: 1.5rem;           /* Espacio interno del contenido */
+    border-radius: 0.5rem;     /* Bordes ligeramente redondeados */
+    border: 0.0625rem solid #ccc; /* Borde gris claro */
+    display: flex;             /* Activa Flexbox */
+    flex-direction: column;    /* Coloca los elementos uno debajo del otro */
+    gap: 0.75rem;              /* Espacio entre elementos */
+}
+
+/* Titulo del formulario de login */
+.login-box h2 {
+    text-align: center;        /* Centra el texto horizontalmente */
+}
+
+/* Estilos de los campos de texto */
+.login-box input {
+    padding: 0.625rem;         /* Espacio interno del contenido */
+    border: 0.0625rem solid #bbb; /* Borde gris claro */
+    border-radius: 0.25rem;    /* Bordes ligeramente redondeados */
+}
+
+/* Estilos del boton */
+.login-box button {
+    padding: 0.625rem;         /* Espacio interno del contenido */
+    background-color: #4CAF50; /* Aplica un color de fondo */
+    color: white;              /* Define el color del texto */
+    border: none;              /* Elimina el borde por defecto */
+    border-radius: 0.25rem;    /* Bordes ligeramente redondeados */
+    cursor: pointer;           /* Cambia el cursor al pasar sobre el botón */
+}
