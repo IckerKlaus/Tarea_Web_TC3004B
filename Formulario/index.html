@@ -1,0 +1,68 @@
+<!DOCTYPE html> <!-- Declaracion del documento HTML5 -->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8"> <!-- Permite caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace el sitio responsive -->
+    <title>Proyecto Web</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Conexion con el archivo CSS -->
+</head>
+
+<body>
+
+    <!-- Header con logo y menu de navegacion -->
+    <header>
+        <div class="logo">Mi Sitio Web</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seccion principal -->
+    <section id="inicio">
+        <h1>Bienvenido a nuestro sitio</h1>
+        <p>Este es nuestro proyecto web con multiples paginas simuladas.</p>
+    </section>
+
+    <!-- Pagina interior 1 -->
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <p>Ofrecemos desarrollo web, diseno y soporte tecnico.</p>
+    </section>
+
+    <!-- Pagina interior 2 -->
+    <section id="nosotros">
+        <h2>Nosotros</h2>
+        <p>Somos un equipo apasionado por la tecnologia y el desarrollo.</p>
+    </section>
+
+    <!-- Pagina interior 3 con formulario de registro -->
+    <section id="contacto">
+        <h2>Registro</h2>
+
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+
+            <label for="correo">Correo electronico:</label>
+            <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo">
+
+            <label for="password">Contrasena:</label>
+            <input type="password" id="password" name="password" placeholder="Ingresa tu contrasena">
+
+            <button type="submit">Registrarse</button>
+        </form>
+    </section>
+
+    <!-- Footer informativo -->
+    <footer>
+        <p>© 2026 Mi Sitio Web - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>

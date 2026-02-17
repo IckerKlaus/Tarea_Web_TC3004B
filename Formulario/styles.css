@@ -1,0 +1,103 @@
+/* Reset basico para eliminar margenes y paddings por defecto */
+* {
+    margin: 0; /* Elimina margen externo */
+    padding: 0; /* Elimina relleno interno */
+    box-sizing: border-box; /* Incluye padding y border dentro del tamano total */
+    font-family: Arial, sans-serif; /* Fuente general */
+}
+
+/* Estilos generales del body */
+body {
+    background-color: #f4f4f4; /* Color de fondo claro */
+    line-height: 1.6; /* Espaciado entre lineas */
+}
+
+header {
+    background-color: #333; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    padding: 15px; /* Espaciado interno */
+    display: flex; /* Activa flexbox */
+    justify-content: space-between; /* Separa logo y menu */
+    align-items: center; /* Centra verticalmente */
+}
+
+.logo {
+    font-size: 20px; /* Tamano de texto */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Lista del menu */
+nav ul {
+    list-style: none; /* Quita vinetas */
+    display: flex; /* Elementos en fila */
+}
+
+/* Elementos individuales del menu */
+nav ul li {
+    margin-left: 20px; /* Espacio entre elementos */
+}
+
+/* Enlaces del menu */
+nav ul li a {
+    color: white; /* Color texto */
+    text-decoration: none; /* Quita subrayado */
+}
+
+/* Efecto hover en enlaces */
+nav ul li a:hover {
+    text-decoration: underline; /* Subrayado al pasar mouse */
+}
+
+section {
+    padding: 40px; /* Espaciado interno */
+    margin: 20px; /* Espaciado externo */
+    background-color: white; /* Fondo blanco */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Titulos */
+h1, h2 {
+    margin-bottom: 15px; /* Espacio inferior */
+}
+
+form {
+    display: flex; /* Activa flexbox */
+    flex-direction: column; /* Elementos en columna */
+    max-width: 400px; /* Ancho maximo */
+}
+
+/* Etiquetas */
+label {
+    margin-top: 10px; /* Espacio superior */
+}
+
+/* Campos de entrada */
+input {
+    padding: 8px; /* Espaciado interno */
+    margin-top: 5px; /* Espacio superior */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+button {
+    margin-top: 15px; /* Espacio superior */
+    padding: 10px; /* Espaciado interno */
+    background-color: #333; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia cursor */
+}
+
+/* Efecto hover boton */
+button:hover {
+    background-color: #555; /* Color mas claro al pasar mouse */
+}
+
+footer {
+    text-align: center; /* Centra texto */
+    padding: 20px; /* Espaciado interno */
+    background-color: #333; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    margin-top: 20px; /* Espacio superior */
+}
