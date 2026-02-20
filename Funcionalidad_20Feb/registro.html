@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- Define que el documento es HTML5 -->
+<html lang="es">
+<!-- Indica que el idioma principal del sitio es español -->
+
+<head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8">
+    <!-- Permite usar caracteres especiales como acentos y ñ -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que el sitio sea responsive en dispositivos móviles -->
+
+    <title>Proyecto Web</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Conecta el archivo CSS externo para los estilos -->
+</head>
+
+<body>
+    <!-- Contenido visible del sitio -->
+
+    <header>
+        <!-- Encabezado principal del sitio -->
+        
+        <div class="logo">Mi Sitio Web</div>
+        <!-- Logo o nombre del sitio -->
+
+        <nav>
+            <!-- Menú de navegación -->
+            <ul>
+                <!-- Lista no ordenada para los enlaces -->
+                <li><a href="#inicio">Inicio</a></li>
+                <!-- Enlace que lleva a la sección Inicio -->
+
+                <li><a href="#servicios">Servicios</a></li>
+                <!-- Enlace que lleva a la sección Servicios -->
+
+                <li><a href="#nosotros">Nosotros</a></li>
+                <!-- Enlace que lleva a la sección Nosotros -->
+
+                <li><a href="#contacto">Contacto</a></li>
+                <!-- Enlace que lleva a la sección Contacto -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Contenedor principal que agrupa las secciones -->
+
+        <section id="inicio">
+            <!-- Sección de bienvenida -->
+            <h1>Bienvenido a nuestro sitio</h1>
+            <p>Este es nuestro proyecto web con multiples paginas simuladas.</p>
+        </section>
+
+        <section id="servicios">
+            <!-- Sección donde se describen los servicios -->
+            <h2>Servicios</h2>
+            <p>Ofrecemos desarrollo web, diseno y soporte tecnico.</p>
+        </section>
+
+        <section id="nosotros">
+            <!-- Sección con información del equipo -->
+            <h2>Nosotros</h2>
+            <p>Somos un equipo apasionado por la tecnologia y el desarrollo.</p>
+        </section>
+
+        <section id="contacto">
+            <!-- Sección de contacto / registro -->
+            <h2>Registro</h2>
+
+            <form>
+                <!-- Formulario para registrar usuarios -->
+
+                <label for="nombre">Nombre:</label>
+                <!-- Etiqueta asociada al input de nombre -->
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+                <!-- Campo de texto para el nombre -->
+
+                <label for="correo">Correo electronico:</label>
+                <!-- Etiqueta del correo -->
+                <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo">
+                <!-- Campo tipo email (valida formato automáticamente) -->
+
+                <label for="password">Contrasena:</label>
+                <!-- Etiqueta de la contraseña -->
+                <input type="password" id="password" name="password" placeholder="Ingresa tu contrasena">
+                <!-- Campo que oculta los caracteres ingresados -->
+
+                <button type="submit">Registrarse</button>
+                <!-- Botón que envía el formulario -->
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <!-- Pie de página del sitio -->
+        <p>© 2026 Mi Sitio Web - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Conecta el archivo JavaScript externo para funcionalidad -->
+</body>
+</html>

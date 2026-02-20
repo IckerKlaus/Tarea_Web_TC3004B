@@ -1,0 +1,183 @@
+/* =======================================================
+   1. RESET Y CONFIGURACIÓN GENERAL
+   ======================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =======================================================
+   2. ESTRUCTURA GLOBAL
+   ======================================================= */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* Centrado especial para login */
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: auto;
+}
+
+/* =======================================================
+   3. LOGIN
+   ======================================================= */
+
+.login-box {
+    background-color: white;
+    width: 100%;
+    max-width: 18.75rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.login-box input {
+    padding: 0.625rem;
+    border: 0.0625rem solid #bbb;
+    border-radius: 0.25rem;
+    width: 100%;
+}
+
+.login-box button {
+    padding: 0.625rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.login-box button:hover {
+    background-color: #45a049;
+}
+
+/* =======================================================
+   4. REGISTRO Y CONTENIDO
+   ======================================================= */
+
+section {
+    background-color: white;
+    padding: 40px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+    color: #000;
+}
+
+p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #555;
+}
