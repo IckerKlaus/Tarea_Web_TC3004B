@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokémon - Listado Completo</title>
+
+    <!-- Hoja de estilos general del proyecto -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Contenedor principal de la página -->
+    <div class="container">
+
+        <!-- Título principal de la Pokédex -->
+        <h1 style="margin: 40px 0 10px 0;">Pokédex</h1>
+        
+        <!-- 
+            Barra de búsqueda.
+            Este input será utilizado desde script.js
+            para filtrar los Pokémon por nombre.
+        -->
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+            <input 
+                type="text" 
+                id="pokemonSearch" 
+                placeholder="Buscar Pokémon por nombre..." 
+                style="width: 100%; max-width: 400px; padding: 12px; border: 2px solid #27ae60;"
+            >
+        </div>
+
+        <!-- 
+            Contenedor donde se insertan dinámicamente
+            las tarjetas de los Pokémon.
+            Se reutiliza la clase tenis-grid para el diseño en grid.
+        -->
+        <div id="pokemon-container" class="tenis-grid">
+            
+            <!-- Mensaje temporal mientras se cargan los datos -->
+            <p style="text-align: center; grid-column: 1 / -1;">
+                Cargando Pokédex...
+            </p>
+
+        </div>
+    </div>
+
+    <!-- Script principal donde está la lógica de carga y filtrado -->
+    <script src="script.js"></script>
+</body>
+</html>

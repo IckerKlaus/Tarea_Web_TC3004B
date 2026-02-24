@@ -1,0 +1,207 @@
+/* =======================================================
+   1. RESET Y CONFIGURACIÓN GENERAL
+   ======================================================= */
+/* Eliminamos márgenes por defecto y unificamos box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Configuración base del body */
+body {
+    background-color: #f4f7f6;
+    line-height: 1.6;
+
+    /* Permite que el footer se mantenga abajo */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =======================================================
+   2. ESTRUCTURA GLOBAL (Header, Footer, Nav)
+   ======================================================= */
+
+/* Barra superior */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Sombra ligera */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Lista horizontal del menú */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+/* Links del menú */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Botón de cerrar sesión */
+.btn-logout {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Footer fijo al final */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: auto;
+}
+
+/* Contenedor general */
+.container {
+    flex-grow: 1;
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =======================================================
+   3. LOGIN BOX
+   ======================================================= */
+
+/* Centra el login en pantalla */
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caja blanca del formulario */
+.login-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 350px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-box h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Inputs del login */
+.login-box input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Botón del login */
+.login-box button {
+    padding: 12px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* =======================================================
+   4. SECCIONES Y FORMULARIOS (Registro)
+   ======================================================= */
+
+/* Estilo general de cada sección */
+section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+
+    /* Sombra ligera */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Formulario en columna */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+/* Inputs generales */
+input {
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Botón del formulario */
+form button {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+
+/* =======================================================
+   5. DISEÑO DE TENIS (GRID)
+   ======================================================= */
+
+/* Grid adaptable */
+.tenis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Tarjetas individuales */
+.box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+
+    /* Línea decorativa verde */
+    border-left: 6px solid #27ae60;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.box h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}

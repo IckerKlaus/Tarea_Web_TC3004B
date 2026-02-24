@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Permite que el diseño sea responsive en celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Web - Registro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 
+        Contenedor principal.
+        Aquí se muestran varias secciones simulando una página más completa.
+    -->
+    <div class="container">
+
+        <!-- Sección de bienvenida -->
+        <section id="inicio">
+            <h1>Bienvenido al sitio</h1>
+            <p>Este es mi proyecto web con múltiples páginas simuladas.</p>
+        </section>
+
+        <!-- Sección de servicios -->
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <p>Ofrecemos desarrollo web, diseño y soporte técnico.</p>
+        </section>
+
+        <!-- Sección donde se encuentra el formulario de registro -->
+        <section id="contacto">
+            <h2>Registro de Usuario</h2>
+
+            <!-- 
+                Formulario de registro.
+                El envío es interceptado en script.js para simular guardado.
+            -->
+            <form id="registroForm">
+                
+                <label for="nombre">Nombre:</label>
+                <input 
+                    type="text" 
+                    id="nombre" 
+                    name="nombre" 
+                    placeholder="Ingresa tu nombre" 
+                    required
+                >
+
+                <label for="correo">Correo electrónico:</label>
+                <input 
+                    type="email" 
+                    id="correo" 
+                    name="correo" 
+                    placeholder="Ingresa tu correo" 
+                    required
+                >
+
+                <label for="password">Contraseña:</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Ingresa tu contraseña" 
+                    required
+                >
+
+                <!-- Botón que envía el formulario -->
+                <button type="submit">Registrarse</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Script general que maneja eventos y seguridad -->
+    <script src="script.js"></script>
+</body>
+</html>
