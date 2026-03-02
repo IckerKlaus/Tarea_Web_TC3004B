@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokémon - Listado Completo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 style="margin: 40px 0 10px 0;">Pokédex</h1>
+        
+        <div class="filters-container">
+            <input 
+                type="text" 
+                id="pokemonSearch" 
+                placeholder="Buscar por nombre..." 
+            >
+            
+            <input 
+                type="number" 
+                id="pokemonIdSearch" 
+                placeholder="ID (ej: 25)" 
+                min="1" 
+                max="151"
+            >
+
+            <select id="pokemonTypeFilter">
+                <option value="all">Todos los tipos</option>
+                <option value="grass">Planta</option>
+                <option value="fire">Fuego</option>
+                <option value="water">Agua</option>
+                <option value="bug">Bicho</option>
+                <option value="normal">Normal</option>
+                <option value="poison">Veneno</option>
+                <option value="electric">Eléctrico</option>
+                <option value="ground">Tierra</option>
+                <option value="fairy">Hada</option>
+                <option value="fighting">Lucha</option>
+                <option value="psychic">Psíquico</option>
+                <option value="rock">Roca</option>
+                <option value="ghost">Fantasma</option>
+                <option value="ice">Hielo</option>
+                <option value="dragon">Dragón</option>
+            </select>
+        </div>
+
+        <div id="pokemon-container" class="tenis-grid">
+            <p style="text-align: center; grid-column: 1 / -1;">
+                Cargando Pokédex...
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
