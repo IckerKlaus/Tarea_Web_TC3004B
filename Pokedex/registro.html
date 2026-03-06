@@ -1,43 +1,249 @@
 <!DOCTYPE html>
+<!--
+Qué hace?
+Indica que el documento utiliza el estándar HTML5.
+
+Cómo lo hace?
+Mediante la declaración <!DOCTYPE html>, que le comunica al navegador cómo debe interpretar el documento.
+
+Por qué se eligió hacerlo de esa manera?
+Garantiza compatibilidad con navegadores modernos y evita que se active el modo de compatibilidad con versiones antiguas.
+-->
+
 <html lang="es">
+<!--
+Qué hace?
+Define el inicio del documento HTML y establece el idioma principal del contenido.
+
+Cómo lo hace?
+Utilizando el atributo lang="es" dentro de la etiqueta <html>.
+
+Por qué se eligió hacerlo de esa manera?
+Mejora la accesibilidad, el SEO y permite que lectores de pantalla interpreten correctamente el idioma.
+-->
+
 <head>
+<!--
+Qué hace?
+Contiene los metadatos y configuraciones generales del documento.
+
+Cómo lo hace?
+Incluyendo etiquetas meta, el título de la página y referencias a archivos externos como hojas de estilo.
+
+Por qué se eligió hacerlo de esa manera?
+Separa la configuración técnica del contenido visible en la página.
+-->
+
     <meta charset="UTF-8">
+    <!--
+    Qué hace?
+    Define la codificación de caracteres del documento.
+
+    Cómo lo hace?
+    Utilizando el estándar UTF-8 para representar caracteres.
+
+    Por qué se eligió hacerlo de esa manera?
+    Permite mostrar correctamente caracteres especiales como acentos y la letra ñ.
+    -->
+
     <!-- Permite que el diseño sea responsive en celular -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+    Qué hace?
+    Permite que la página se adapte correctamente a diferentes tamaños de pantalla.
+
+    Cómo lo hace?
+    Configura el ancho del viewport para que coincida con el ancho del dispositivo y establece un nivel de escala inicial.
+
+    Por qué se eligió hacerlo de esa manera?
+    Es una práctica estándar para lograr diseños responsivos que funcionen bien en dispositivos móviles.
+    -->
+
     <title>Proyecto Web - Registro</title>
+    <!--
+    Qué hace?
+    Define el título que aparecerá en la pestaña del navegador.
+
+    Cómo lo hace?
+    Utilizando la etiqueta <title> dentro del <head>.
+
+    Por qué se eligió hacerlo de esa manera?
+    Permite identificar fácilmente la página cuando el usuario tiene múltiples pestañas abiertas y mejora la indexación en buscadores.
+    -->
+
     <link rel="stylesheet" href="styles.css">
+    <!--
+    Qué hace?
+    Importa una hoja de estilos externa que define el diseño visual del sitio.
+
+    Cómo lo hace?
+    Mediante la etiqueta <link> con rel="stylesheet" apuntando al archivo styles.css.
+
+    Por qué se eligió hacerlo de esa manera?
+    Permite separar la estructura del contenido (HTML) de la presentación visual (CSS), facilitando mantenimiento y reutilización.
+    -->
+
 </head>
+
 <body>
+<!--
+Qué hace?
+Contiene todos los elementos visibles que conforman la interfaz del usuario.
+
+Cómo lo hace?
+Incluyendo contenedores, secciones, formularios y texto.
+
+Por qué se eligió hacerlo de esa manera?
+La etiqueta <body> es el contenedor principal donde se coloca todo el contenido visible del documento.
+-->
 
     <!-- 
         Contenedor principal.
         Aquí se muestran varias secciones simulando una página más completa.
     -->
     <div class="container">
+    <!--
+    Qué hace?
+    Agrupa todo el contenido principal de la página.
+
+    Cómo lo hace?
+    Utilizando un <div> con la clase "container" que puede ser estilizada desde CSS.
+
+    Por qué se eligió hacerlo de esa manera?
+    Permite aplicar estilos globales como centrado, ancho máximo o márgenes para estructurar el diseño.
+    -->
 
         <!-- Sección de bienvenida -->
         <section id="inicio">
+        <!--
+        Qué hace?
+        Representa la sección inicial o de bienvenida del sitio.
+
+        Cómo lo hace?
+        Utilizando una etiqueta semántica <section> identificada con el id "inicio".
+
+        Por qué se eligió hacerlo de esa manera?
+        Facilita la organización del contenido y permite que cada sección pueda ser manipulada o estilizada individualmente.
+        -->
+
             <h1>Bienvenido al sitio</h1>
+            <!--
+            Qué hace?
+            Muestra el encabezado principal de la página.
+
+            Cómo lo hace?
+            Utilizando la etiqueta <h1> que representa el nivel más alto de encabezado.
+
+            Por qué se eligió hacerlo de esa manera?
+            Mejora la estructura semántica del documento y facilita su comprensión para usuarios y motores de búsqueda.
+            -->
+
             <p>Este es mi proyecto web con múltiples páginas simuladas.</p>
+            <!--
+            Qué hace?
+            Proporciona una breve descripción del sitio o proyecto.
+
+            Cómo lo hace?
+            Mediante un párrafo utilizando la etiqueta <p>.
+
+            Por qué se eligió hacerlo de esa manera?
+            Es la forma estándar de mostrar texto descriptivo dentro de HTML.
+            -->
+
         </section>
 
         <!-- Sección de servicios -->
         <section id="servicios">
+        <!--
+        Qué hace?
+        Presenta información sobre los servicios ofrecidos en el sitio.
+
+        Cómo lo hace?
+        Utilizando una sección identificada con el id "servicios".
+
+        Por qué se eligió hacerlo de esa manera?
+        Permite dividir el contenido en bloques temáticos claros y estructurados.
+        -->
+
             <h2>Servicios</h2>
+            <!--
+            Qué hace?
+            Define el título de la sección de servicios.
+
+            Cómo lo hace?
+            Utilizando un encabezado de nivel <h2>.
+
+            Por qué se eligió hacerlo de esa manera?
+            Mantiene una jerarquía lógica debajo del título principal de la página.
+            -->
+
             <p>Ofrecemos desarrollo web, diseño y soporte técnico.</p>
+            <!--
+            Qué hace?
+            Describe brevemente los servicios ofrecidos.
+
+            Cómo lo hace?
+            Mediante un párrafo con texto descriptivo.
+
+            Por qué se eligió hacerlo de esa manera?
+            Permite comunicar información de forma clara y estructurada.
+            -->
+
         </section>
 
         <!-- Sección donde se encuentra el formulario de registro -->
         <section id="contacto">
+        <!--
+        Qué hace?
+        Contiene el formulario donde los usuarios pueden registrarse.
+
+        Cómo lo hace?
+        Utilizando una sección con el id "contacto" que incluye un formulario HTML.
+
+        Por qué se eligió hacerlo de esa manera?
+        Permite separar la funcionalidad de registro del resto del contenido de la página.
+        -->
+
             <h2>Registro de Usuario</h2>
+            <!--
+            Qué hace?
+            Muestra el título de la sección de registro.
+
+            Cómo lo hace?
+            Utilizando un encabezado <h2>.
+
+            Por qué se eligió hacerlo de esa manera?
+            Mantiene una jerarquía adecuada dentro de la estructura del documento.
+            -->
 
             <!-- 
                 Formulario de registro.
                 El envío es interceptado en script.js para simular guardado.
             -->
             <form id="registroForm">
-                
+            <!--
+            Qué hace?
+            Permite a los usuarios ingresar información para registrarse.
+
+            Cómo lo hace?
+            Utilizando un formulario HTML con campos de entrada y un botón de envío.
+
+            Por qué se eligió hacerlo de esa manera?
+            Los formularios son el mecanismo estándar para capturar datos del usuario en aplicaciones web.
+            -->
+
                 <label for="nombre">Nombre:</label>
+                <!--
+                Qué hace?
+                Describe el campo donde el usuario ingresará su nombre.
+
+                Cómo lo hace?
+                Mediante una etiqueta <label> asociada al input correspondiente mediante el atributo "for".
+
+                Por qué se eligió hacerlo de esa manera?
+                Mejora la accesibilidad y facilita la interacción con el campo de entrada.
+                -->
+
                 <input 
                     type="text" 
                     id="nombre" 
@@ -45,8 +251,19 @@
                     placeholder="Ingresa tu nombre" 
                     required
                 >
+                <!--
+                Qué hace?
+                Permite al usuario ingresar su nombre.
+
+                Cómo lo hace?
+                Utilizando un input de tipo texto con validación obligatoria mediante el atributo "required".
+
+                Por qué se eligió hacerlo de esa manera?
+                Garantiza que el usuario proporcione este dato antes de enviar el formulario.
+                -->
 
                 <label for="correo">Correo electrónico:</label>
+
                 <input 
                     type="email" 
                     id="correo" 
@@ -54,8 +271,19 @@
                     placeholder="Ingresa tu correo" 
                     required
                 >
+                <!--
+                Qué hace?
+                Permite al usuario ingresar su correo electrónico.
+
+                Cómo lo hace?
+                Utilizando un input de tipo "email", que valida automáticamente el formato del correo.
+
+                Por qué se eligió hacerlo de esa manera?
+                Reduce errores de entrada y mejora la calidad de los datos ingresados.
+                -->
 
                 <label for="password">Contraseña:</label>
+
                 <input 
                     type="password" 
                     id="password" 
@@ -63,14 +291,46 @@
                     placeholder="Ingresa tu contraseña" 
                     required
                 >
+                <!--
+                Qué hace?
+                Permite al usuario ingresar una contraseña.
+
+                Cómo lo hace?
+                Utilizando un campo de tipo "password" que oculta los caracteres mientras se escriben.
+
+                Por qué se eligió hacerlo de esa manera?
+                Protege visualmente la información sensible mientras el usuario la introduce.
+                -->
 
                 <!-- Botón que envía el formulario -->
                 <button type="submit">Registrarse</button>
+                <!--
+                Qué hace?
+                Permite enviar los datos ingresados en el formulario.
+
+                Cómo lo hace?
+                Utilizando un botón de tipo "submit" que dispara el evento de envío del formulario.
+
+                Por qué se eligió hacerlo de esa manera?
+                Es el mecanismo estándar para enviar datos de formularios en aplicaciones web.
+                -->
+
             </form>
         </section>
     </div>
 
     <!-- Script general que maneja eventos y seguridad -->
     <script src="script.js"></script>
+    <!--
+    Qué hace?
+    Carga el archivo JavaScript que maneja la lógica de la página.
+
+    Cómo lo hace?
+    Mediante la etiqueta <script> que importa el archivo externo script.js.
+
+    Por qué se eligió hacerlo de esa manera?
+    Permite manejar eventos del formulario, validaciones y simulaciones de almacenamiento sin mezclar la lógica con el HTML.
+    -->
+
 </body>
 </html>

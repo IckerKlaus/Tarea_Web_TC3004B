@@ -1,29 +1,100 @@
 /* =======================================================
    1. RESET Y CONFIGURACIÓN GENERAL
    ======================================================= */
+
+/*
+Qué hace?
+Elimina estilos por defecto de los navegadores y establece configuraciones base
+para que todos los elementos del sitio tengan un comportamiento consistente.
+
+Cómo lo hace?
+Aplicando reglas globales a todos los elementos mediante el selector universal (*).
+
+Por qué se eligió hacerlo de esa manera?
+Los navegadores aplican estilos predeterminados distintos. Un reset CSS
+garantiza que el diseño se vea consistente en todos los navegadores.
+*/
+
 /* Eliminamos márgenes por defecto y unificamos box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Arial, sans-serif;
+
+    /*
+    Qué hace?
+    Define la tipografía global del sitio.
+
+    Cómo lo hace?
+    Estableciendo 'Segoe UI' como fuente principal y Arial como alternativa.
+
+    Por qué se eligió hacerlo de esa manera?
+    Son fuentes limpias, legibles y ampliamente soportadas en navegadores.
+    */
 }
+
+/*
+Qué hace?
+Define la configuración visual y estructural base del documento.
+
+Cómo lo hace?
+Aplicando estilos al elemento body.
+
+Por qué se eligió hacerlo de esa manera?
+El body es el contenedor principal de todo el contenido visible de la página.
+*/
 
 /* Configuración base del body */
 body {
     background-color: #f4f7f6;
     line-height: 1.6;
 
+    /*
+    Qué hace?
+    Mejora la legibilidad del texto.
+
+    Cómo lo hace?
+    Ajustando el espacio vertical entre líneas de texto.
+
+    Por qué se eligió hacerlo de esa manera?
+    Facilita la lectura y mejora la experiencia del usuario.
+    */
+
     /* Permite que el footer se mantenga abajo */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    /*
+    Qué hace?
+    Permite que el layout (disposición, estructura y organización visual de elementos) sea flexible y que el footer permanezca al fondo.
+
+    Cómo lo hace?
+    Utilizando Flexbox con dirección vertical.
+
+    Por qué se eligió hacerlo de esa manera?
+    Flexbox permite controlar fácilmente la distribución vertical del contenido.
+    */
 }
 
 
 /* =======================================================
    2. ESTRUCTURA GLOBAL (Header, Footer, Nav)
    ======================================================= */
+
+/*
+Qué hace?
+Define el estilo de la barra superior del sitio.
+
+Cómo lo hace?
+Aplicando un fondo oscuro, color de texto claro y usando Flexbox
+para organizar los elementos.
+
+Por qué se eligió hacerlo de esa manera?
+Flexbox facilita la alineación horizontal entre el logo, el menú
+y otros elementos del header.
+*/
 
 /* Barra superior */
 header {
@@ -36,7 +107,29 @@ header {
 
     /* Sombra ligera */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    /*
+    Qué hace?
+    Añade una sombra ligera debajo del header.
+
+    Cómo lo hace?
+    Utilizando la propiedad box-shadow.
+
+    Por qué se eligió hacerlo de esa manera?
+    Genera separación visual entre el header y el resto del contenido.
+    */
 }
+
+/*
+Qué hace?
+Define el estilo de la lista de navegación.
+
+Cómo lo hace?
+Eliminando viñetas y alineando los elementos horizontalmente con Flexbox.
+
+Por qué se eligió hacerlo de esa manera?
+Permite crear menús horizontales modernos.
+*/
 
 /* Lista horizontal del menú */
 nav ul {
@@ -45,8 +138,20 @@ nav ul {
     align-items: center;
 }
 
+/* Separación entre elementos del menú */
 nav ul li {
     margin-left: 20px;
+
+    /*
+    Qué hace?
+    Añade espacio entre los enlaces del menú.
+
+    Cómo lo hace?
+    Aplicando margen izquierdo a cada elemento de la lista.
+
+    Por qué se eligió hacerlo de esa manera?
+    Mejora la legibilidad y evita que los enlaces estén demasiado juntos.
+    */
 }
 
 /* Links del menú */
@@ -54,7 +159,29 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: 500;
+
+    /*
+    Qué hace?
+    Define el estilo visual de los enlaces del menú.
+
+    Cómo lo hace?
+    Eliminando el subrayado y aplicando color blanco.
+
+    Por qué se eligió hacerlo de esa manera?
+    Mantiene una estética limpia y coherente con el diseño del header.
+    */
 }
+
+/*
+Qué hace?
+Define el estilo del botón de cerrar sesión.
+
+Cómo lo hace?
+Aplicando un fondo rojo, texto blanco y bordes redondeados.
+
+Por qué se eligió hacerlo de esa manera?
+El rojo suele utilizarse para acciones importantes o de salida.
+*/
 
 /* Botón de cerrar sesión */
 .btn-logout {
@@ -67,6 +194,17 @@ nav ul li a {
     font-weight: bold;
 }
 
+/*
+Qué hace?
+Define el estilo del footer del sitio.
+
+Cómo lo hace?
+Centrando el texto y aplicando colores similares al header.
+
+Por qué se eligió hacerlo de esa manera?
+Mantiene consistencia visual entre las secciones superior e inferior.
+*/
+
 /* Footer fijo al final */
 footer {
     text-align: center;
@@ -74,7 +212,29 @@ footer {
     background-color: #2c3e50;
     color: white;
     margin-top: auto;
+
+    /*
+    Qué hace?
+    Empuja el footer hacia la parte inferior de la pantalla.
+
+    Cómo lo hace?
+    Utilizando margin-top: auto dentro de un layout flex.
+
+    Por qué se eligió hacerlo de esa manera?
+    Permite crear un "sticky footer" sin usar posicionamiento absoluto.
+    */
 }
+
+/*
+Qué hace?
+Define el contenedor principal del contenido.
+
+Cómo lo hace?
+Estableciendo ancho máximo, centrado horizontal y padding interno.
+
+Por qué se eligió hacerlo de esa manera?
+Evita que el contenido se extienda demasiado en pantallas grandes.
+*/
 
 /* Contenedor general */
 .container {
@@ -89,6 +249,17 @@ footer {
    3. LOGIN BOX
    ======================================================= */
 
+/*
+Qué hace?
+Centra el formulario de login vertical y horizontalmente.
+
+Cómo lo hace?
+Utilizando Flexbox dentro del elemento main.
+
+Por qué se eligió hacerlo de esa manera?
+Flexbox facilita el centrado perfecto en pantalla.
+*/
+
 /* Centra el login en pantalla */
 main {
     flex-grow: 1;
@@ -96,6 +267,17 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+/*
+Qué hace?
+Define el diseño visual del cuadro de login.
+
+Cómo lo hace?
+Aplicando fondo blanco, padding, bordes redondeados y sombra.
+
+Por qué se eligió hacerlo de esa manera?
+Las "cards" con sombra son un patrón moderno de diseño UI.
+*/
 
 /* Caja blanca del formulario */
 .login-box {
@@ -111,6 +293,7 @@ main {
     gap: 15px;
 }
 
+/* Título del login */
 .login-box h2 {
     text-align: center;
     color: #333;
@@ -122,6 +305,17 @@ main {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
+/*
+Qué hace?
+Define el estilo del botón de login.
+
+Cómo lo hace?
+Aplicando fondo verde, texto blanco y bordes redondeados.
+
+Por qué se eligió hacerlo de esa manera?
+El color verde suele asociarse con acciones positivas como ingresar o confirmar.
+*/
 
 /* Botón del login */
 .login-box button {
@@ -139,6 +333,17 @@ main {
    4. SECCIONES Y FORMULARIOS (Registro)
    ======================================================= */
 
+/*
+Qué hace?
+Define el estilo visual de las secciones del sitio.
+
+Cómo lo hace?
+Aplicando fondo blanco, padding y sombras ligeras.
+
+Por qué se eligió hacerlo de esa manera?
+Permite separar visualmente cada sección del contenido.
+*/
+
 /* Estilo general de cada sección */
 section {
     background: white;
@@ -146,7 +351,6 @@ section {
     margin-bottom: 20px;
     border-radius: 8px;
 
-    /* Sombra ligera */
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
@@ -155,6 +359,17 @@ form {
     display: flex;
     flex-direction: column;
     max-width: 400px;
+
+    /*
+    Qué hace?
+    Organiza los campos del formulario verticalmente.
+
+    Cómo lo hace?
+    Usando Flexbox en dirección de columna.
+
+    Por qué se eligió hacerlo de esa manera?
+    Permite controlar fácilmente el espaciado entre inputs.
+    */
 }
 
 /* Inputs generales */
@@ -181,13 +396,40 @@ form button {
    5. DISEÑO DE TENIS (GRID)
    ======================================================= */
 
-/* Grid adaptable */
+/*
+Qué hace?
+Define un layout tipo grid para mostrar tarjetas.
+
+Cómo lo hace?
+Utilizando CSS Grid con columnas adaptables.
+
+Por qué se eligió hacerlo de esa manera?
+CSS Grid permite crear diseños responsivos de manera sencilla.
+*/
+
+/* Clase Grid adaptable */
 .tenis-grid {
-    display: grid;
+    display: grid; /*Convierte el contenedor en un grid layout (permite organizar elementod en filas y columnas)*/
+    /* Define cuántas columnas tendrá el grid, repeat() repite las columnas 
+    automáticamente, ato-fit mete tantas columnas como quepan y 
+    minmax(300px, 1fr) define el tamaño de cada columna.
+    mínimo → 300px
+    máximo → ocupar espacio disponible*/
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
+    gap: 25px; /*Agrega espacio entre las tarjetas.*/
+    margin-top: 20px; /*Agrega espacio arriba del grid.*/
 }
+
+/*
+Qué hace?
+Define el diseño visual de cada tarjeta.
+
+Cómo lo hace?
+Aplicando padding, bordes redondeados y sombra.
+
+Por qué se eligió hacerlo de esa manera?
+Las tarjetas son un patrón visual común para mostrar información separada.
+*/
 
 /* Tarjetas individuales */
 .box {
@@ -201,33 +443,67 @@ form button {
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
+/* Título dentro de la tarjeta */
 .box h2 {
     color: #2c3e50;
     margin-bottom: 10px;
 }
 
-/* Estilos para los nuevos filtros */
+
+/* =======================================================
+   6. FILTROS DE BÚSQUEDA (POKEDEX)
+   ======================================================= */
+
+/*
+Qué hace?
+Define el contenedor de los filtros de búsqueda.
+
+Cómo lo hace?
+Usando Flexbox para alinear inputs y select.
+
+Por qué se eligió hacerlo de esa manera?
+Permite acomodar filtros horizontalmente y adaptarlos en pantallas pequeñas.
+*/
+
 .filters-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin-bottom: 30px;
+    display: flex; /*Activa Flexbox.*/
+    flex-wrap: wrap; /*Permite que los elementos salten a otra línea.*/
+    gap: 15px; /*Espacio entre los filtros.*/
+    justify-content: center; /*Centra los filtros horizontalmente.*/
+    margin-bottom: 30px; /*Espacio abajo del contenedor de filtros.*/
 }
 
+/* Aplica estilos a inputs y select dentro de filtros */
 .filters-container input, 
 .filters-container select {
-    padding: 12px;
-    border: 2px solid #27ae60;
-    border-radius: 5px;
-    outline: none;
+    padding: 12px; /*Espacio interno para los inputs y select.*/
+    border: 2px solid #27ae60; /*Define el borde.*/
+    border-radius: 5px; /*Redondea las esquinas.*/
+    outline: none; /*Elimina el borde azul que aparece al hacer click.*/
 }
 
+/* Ajustes de tamaño para cada filtro
+Los selecciones con #blablabla
+con flex hace que este input ocupe más espacio que los demás.
+con min-width define el ancho mínimo, evitando que el input se haga demasiado pequeño.
+con el max-width hace lo contrario que con el min-width
+cursor cambia el cursor al pasar el mouse.*/
 #pokemonSearch { flex: 2; min-width: 200px; max-width: 400px; }
 #pokemonIdSearch { flex: 0.5; min-width: 80px; max-width: 120px; }
 #pokemonTypeFilter { flex: 1; min-width: 150px; max-width: 200px; cursor: pointer; }
 
-@media (max-width: 600px) {
-    .filters-container { flex-direction: column; align-items: stretch; }
-    #pokemonSearch, #pokemonIdSearch, #pokemonTypeFilter { max-width: none; }
+/*
+Qué hace?
+Define reglas responsivas para pantallas pequeñas.
+
+Cómo lo hace?
+Usando una media query.
+
+Por qué se eligió hacerlo de esa manera?
+Permite que el diseño se adapte correctamente en dispositivos móviles.
+*/
+
+@media (max-width: 600px) { /*Aplica estilos solo cuando la pantalla es menor a 600px, normalmente teléfonos*/
+    .filters-container { flex-direction: column; align-items: stretch; } /*Organiza los filtros en columna y los estira para ocupar todo el ancho disponible.*/
+    #pokemonSearch, #pokemonIdSearch, #pokemonTypeFilter { max-width: none; } /*Permite que los filtros ocupen todo el ancho disponible en móvil.*/
 }

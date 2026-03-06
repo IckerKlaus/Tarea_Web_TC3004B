@@ -1,33 +1,185 @@
 <!DOCTYPE html>
+<!--
+Qué hace?
+Declara que el documento utiliza el estándar HTML5.
+
+Cómo lo hace?
+Mediante la declaración <!DOCTYPE html>, que le indica al navegador que debe interpretar el documento usando el modelo moderno de HTML.
+
+Por qué se eligió hacerlo de esa manera?
+Garantiza compatibilidad con navegadores actuales y evita que el navegador use modos antiguos de renderizado.
+-->
+
 <html lang="es">
+<!--
+Qué hace?
+Define el inicio del documento HTML y especifica que el idioma del contenido es español.
+
+Cómo lo hace?
+Usando el atributo lang="es" dentro de la etiqueta <html>.
+
+Por qué se eligió hacerlo de esa manera?
+Permite que navegadores, motores de búsqueda y tecnologías de accesibilidad interpreten correctamente el idioma del contenido.
+-->
+
 <head>
+<!--
+Qué hace?
+Contiene metadatos y configuraciones del documento que no se muestran directamente en la interfaz del usuario.
+
+Cómo lo hace?
+Incluyendo etiquetas meta, el título de la página y referencias a archivos externos como hojas de estilo.
+
+Por qué se eligió hacerlo de esa manera?
+Separa la configuración técnica del documento del contenido visual mostrado al usuario.
+-->
+
     <meta charset="UTF-8">
+    <!--
+    Qué hace?
+    Define la codificación de caracteres del documento.
+
+    Cómo lo hace?
+    Utilizando el estándar UTF-8, que permite representar una gran variedad de caracteres.
+
+    Por qué se eligió hacerlo de esa manera?
+    Asegura que caracteres especiales del español (acentos, ñ, símbolos) se muestren correctamente.
+    -->
+
     <title>Login - Mi Sitio</title>
+    <!--
+    Qué hace?
+    Define el título de la página que aparecerá en la pestaña del navegador.
+
+    Cómo lo hace?
+    Mediante la etiqueta <title> dentro del <head>.
+
+    Por qué se eligió hacerlo de esa manera?
+    Facilita la identificación de la página cuando el usuario tiene múltiples pestañas abiertas y mejora la indexación en buscadores.
+    -->
+
     <!-- Hoja de estilos general del proyecto -->
     <link rel="stylesheet" href="styles.css">
+    <!--
+    Qué hace?
+    Importa la hoja de estilos externa que controla la apariencia visual del sitio.
+
+    Cómo lo hace?
+    Usando la etiqueta <link> con el atributo rel="stylesheet" que indica al navegador que debe cargar un archivo CSS.
+
+    Por qué se eligió hacerlo de esa manera?
+    Permite separar la presentación visual del contenido HTML, facilitando mantenimiento y reutilización del diseño.
+    -->
+
 </head>
+
 <body>
+<!--
+Qué hace?
+Contiene todos los elementos visibles que el usuario verá en la página de inicio de sesión.
+
+Cómo lo hace?
+Mediante la inclusión de elementos HTML estructurales y de formulario.
+
+Por qué se eligió hacerlo de esa manera?
+La etiqueta <body> es el contenedor estándar donde se coloca toda la interfaz visible de una página web.
+-->
 
     <!-- 
         Página sencilla de inicio de sesión.
         Aquí el usuario ingresa sus credenciales para acceder al sitio.
     -->
+
     <main>
+    <!--
+    Qué hace?
+    Define el contenido principal de la página.
+
+    Cómo lo hace?
+    Utilizando la etiqueta semántica <main> para envolver el contenido principal.
+
+    Por qué se eligió hacerlo de esa manera?
+    Mejora la semántica del HTML y facilita el trabajo de lectores de pantalla y motores de búsqueda.
+    -->
+
         <div class="login-box">
+        <!--
+        Qué hace?
+        Actúa como contenedor del formulario de inicio de sesión.
+
+        Cómo lo hace?
+        Utilizando un <div> con la clase "login-box", que puede ser estilizado desde CSS.
+
+        Por qué se eligió hacerlo de esa manera?
+        Permite aplicar estilos específicos como centrado, bordes, fondo o sombras para crear una caja visual de login.
+        -->
+
             <h2>Login</h2>
+            <!--
+            Qué hace?
+            Muestra el título del formulario de inicio de sesión.
+
+            Cómo lo hace?
+            Usando una etiqueta de encabezado <h2>.
+
+            Por qué se eligió hacerlo de esa manera?
+            Permite estructurar jerárquicamente el contenido y mejora la legibilidad de la interfaz.
+            -->
 
             <!-- Campo para capturar el correo -->
             <input type="email" id="loginCorreo" placeholder="Correo electrónico">
+            <!--
+            Qué hace?
+            Permite al usuario ingresar su correo electrónico.
+
+            Cómo lo hace?
+            Usando un input de tipo "email", que valida automáticamente el formato de correo.
+
+            Por qué se eligió hacerlo de esa manera?
+            Proporciona validación básica automática en el navegador y mejora la experiencia del usuario.
+            -->
 
             <!-- Campo para capturar la contraseña -->
             <input type="password" id="loginPass" placeholder="Contraseña">
+            <!--
+            Qué hace?
+            Permite al usuario ingresar su contraseña.
+
+            Cómo lo hace?
+            Utilizando un input de tipo "password", que oculta los caracteres ingresados.
+
+            Por qué se eligió hacerlo de esa manera?
+            Protege visualmente la contraseña mientras el usuario la escribe.
+            -->
 
             <!-- Botón que dispara la validación en script.js -->
             <button id="btnEntrar">Entrar</button>
+            <!--
+            Qué hace?
+            Permite que el usuario envíe sus credenciales para iniciar sesión.
+
+            Cómo lo hace?
+            Mediante un botón que será capturado por JavaScript utilizando su id.
+
+            Por qué se eligió hacerlo de esa manera?
+            Facilita que el archivo script.js agregue un evento de clic para validar las credenciales o procesar el login.
+            -->
+
         </div>
     </main>
 
     <!-- Lógica principal del sistema -->
     <script src="script.js"></script>
+    <!--
+    Qué hace?
+    Carga el archivo JavaScript que contiene la lógica del sistema de inicio de sesión.
+
+    Cómo lo hace?
+    Usando la etiqueta <script> que importa el archivo externo script.js.
+
+    Por qué se eligió hacerlo de esa manera?
+    Permite separar la lógica de programación del HTML, manteniendo el código más organizado y modular.
+    -->
+
 </body>
 </html>

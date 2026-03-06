@@ -1,23 +1,140 @@
 <!DOCTYPE html>
+<!--
+Qué hace?
+Define que el documento utiliza HTML5 como estándar.
+
+Cómo lo hace?
+Mediante la declaración DOCTYPE, que indica al navegador que debe interpretar el documento usando el estándar HTML5.
+
+Por qué se eligió hacerlo de esa manera?
+Porque garantiza compatibilidad con navegadores modernos y evita modos de compatibilidad antiguos que pueden romper el diseño o comportamiento.
+-->
+
 <html lang="es">
+<!--
+Qué hace?
+Define el inicio del documento HTML y establece que el contenido está en español.
+
+Cómo lo hace?
+Usando el atributo lang="es", que informa al navegador y a tecnologías de accesibilidad el idioma del contenido.
+
+Por qué se eligió hacerlo de esa manera?
+Mejora la accesibilidad, el SEO y permite que lectores de pantalla interpreten correctamente el idioma del contenido.
+-->
+
 <head>
+    <!--
+    Qué hace?
+    Contiene metadatos y configuraciones del documento que no se muestran directamente en la página.
+
+    Cómo lo hace?
+    Incluye etiquetas meta, título del documento y enlaces a archivos externos como hojas de estilo.
+
+    Por qué se eligió hacerlo de esa manera?
+    Mantiene separada la configuración del documento del contenido visible.
+    -->
+
     <meta charset="UTF-8">
+    <!--
+    Qué hace?
+    Define la codificación de caracteres del documento.
+
+    Cómo lo hace?
+    Usando UTF-8, que soporta prácticamente todos los caracteres y símbolos.
+
+    Por qué se eligió hacerlo de esa manera?
+    Permite mostrar correctamente caracteres especiales del español como tildes, ñ, etc.
+    -->
+
     <title>Pokémon - Listado Completo</title>
+    <!--
+    Qué hace?
+    Define el título de la página que aparece en la pestaña del navegador.
+
+    Cómo lo hace?
+    Mediante la etiqueta <title> dentro del <head>.
+
+    Por qué se eligió hacerlo de esa manera?
+    Mejora la experiencia del usuario y facilita identificar la página entre varias pestañas.
+    -->
+
     <link rel="stylesheet" href="styles.css">
+    <!--
+    Qué hace?
+    Vincula una hoja de estilos externa para definir la apariencia visual de la página.
+
+    Cómo lo hace?
+    Mediante la etiqueta <link> con rel="stylesheet", indicando al navegador que cargue el archivo CSS.
+
+    Por qué se eligió hacerlo de esa manera?
+    Permite separar el diseño (CSS) de la estructura (HTML), facilitando mantenimiento y reutilización.
+    -->
 </head>
+
 <body>
+    <!--
+    Qué hace?
+    Contiene todo el contenido visible de la página.
+
+    Cómo lo hace?
+    Incluyendo elementos HTML que representan estructura, texto, formularios y contenedores.
+
+    Por qué se eligió hacerlo de esa manera?
+    Es la sección estándar donde se coloca toda la interfaz que verá el usuario.
+    -->
 
     <div class="container">
+        <!--
+        Qué hace?
+        Agrupa todo el contenido principal de la página dentro de un contenedor.
+
+        Cómo lo hace?
+        Utilizando un <div> con clase "container".
+
+        Por qué se eligió hacerlo de esa manera?
+        Permite aplicar estilos globales como ancho máximo, centrado o márgenes desde CSS.
+        -->
 
         <h1 style="margin: 40px 0 10px 0;">Pokédex</h1>
-        
+        <!--
+        Qué hace?
+        Muestra el título principal de la página.
+
+        Cómo lo hace?
+        Mediante la etiqueta semántica <h1>, que representa el encabezado principal del documento.
+
+        Por qué se eligió hacerlo de esa manera?
+        Mejora la estructura semántica del HTML y favorece SEO (search engine optimization) y accesibilidad.
+        -->
+
         <div class="filters-container">
+        <!--
+        Qué hace?
+        Contiene todos los controles de filtrado de Pokémon.
+
+        Cómo lo hace?
+        Agrupa los inputs y el select dentro de un contenedor.
+
+        Por qué se eligió hacerlo de esa manera?
+        Permite aplicar estilos y organizar visualmente los filtros como un bloque funcional.
+        -->
+
             <input 
                 type="text" 
                 id="pokemonSearch" 
                 placeholder="Buscar por nombre..." 
             >
-            
+            <!--
+            Qué hace?
+            Permite buscar Pokémon por nombre.
+
+            Cómo lo hace?
+            Mediante un campo de texto donde el usuario puede escribir el nombre del Pokémon.
+
+            Por qué se eligió hacerlo de esa manera?
+            Es la forma más directa e intuitiva de permitir búsquedas por texto.
+            -->
+
             <input 
                 type="number" 
                 id="pokemonIdSearch" 
@@ -25,8 +142,29 @@
                 min="1" 
                 max="151"
             >
+            <!--
+            Qué hace?
+            Permite buscar un Pokémon específico por su número de Pokédex.
+
+            Cómo lo hace?
+            Usando un input de tipo number que limita el rango permitido entre 1 y 151.
+
+            Por qué se eligió hacerlo de esa manera?
+            Previene entradas inválidas y restringe la búsqueda a los Pokémon de la primera generación.
+            -->
 
             <select id="pokemonTypeFilter">
+            <!--
+            Qué hace?
+            Permite filtrar los Pokémon según su tipo.
+
+            Cómo lo hace?
+            Usando un menú desplegable (<select>) con diferentes opciones de tipo.
+
+            Por qué se eligió hacerlo de esa manera?
+            Un dropdown evita errores de escritura y garantiza que solo se seleccionen tipos válidos.
+            -->
+
                 <option value="all">Todos los tipos</option>
                 <option value="grass">Planta</option>
                 <option value="fire">Fuego</option>
@@ -43,16 +181,60 @@
                 <option value="ghost">Fantasma</option>
                 <option value="ice">Hielo</option>
                 <option value="dragon">Dragón</option>
+
+                <!--
+                Qué hace?
+                Define las opciones disponibles para filtrar Pokémon por tipo.
+
+                Cómo lo hace?
+                Cada <option> representa un tipo de Pokémon con un valor que será utilizado por JavaScript para aplicar el filtro.
+
+                Por qué se eligió hacerlo de esa manera?
+                Facilita la interacción del usuario y permite que el script filtre fácilmente usando valores predefinidos.
+                -->
             </select>
         </div>
 
         <div id="pokemon-container" class="tenis-grid">
+        <!--
+        Qué hace?
+        Es el contenedor donde se mostrarán los Pokémon cargados dinámicamente.
+
+        Cómo lo hace?
+        Utilizando un div identificado con un id que será manipulado desde JavaScript.
+
+        Por qué se eligió hacerlo de esa manera?
+        Permite que el script inserte dinámicamente tarjetas de Pokémon sin necesidad de recargar la página.
+        -->
+
             <p style="text-align: center; grid-column: 1 / -1;">
                 Cargando Pokédex...
             </p>
+
+            <!--
+            Qué hace?
+            Muestra un mensaje temporal mientras se cargan los datos de los Pokémon.
+
+            Cómo lo hace?
+            Presenta un párrafo dentro del contenedor principal.
+
+            Por qué se eligió hacerlo de esa manera?
+            Mejora la experiencia del usuario al indicar que los datos están siendo cargados.
+            -->
         </div>
     </div>
 
     <script src="script.js"></script>
+    <!--
+    Qué hace?
+    Importa el archivo JavaScript que contiene la lógica de la aplicación.
+
+    Cómo lo hace?
+    Usando la etiqueta <script> que carga el archivo externo script.js.
+
+    Por qué se eligió hacerlo de esa manera?
+    Permite manejar la lógica dinámica como carga de datos, filtrado y manipulación del DOM  (Document Object Model o Modelo de Objetos del Documento) sin mezclarla con el HTML.
+    -->
+
 </body>
 </html>
