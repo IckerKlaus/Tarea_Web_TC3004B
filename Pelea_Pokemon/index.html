@@ -1,0 +1,227 @@
+<!DOCTYPE html> 
+<!-- Qué: Declara el tipo de documento como HTML5.
+     Cómo: Le dice al navegador qué estándar usar.
+     Por qué: Evita modo compatibilidad viejo.
+     Para qué: Permitir usar CSS moderno, flexbox, JS moderno. -->
+
+<html lang="es"> 
+<!-- Qué: Elemento raíz del documento.
+     Cómo: Envuelve TODO el contenido.
+     Por qué: Necesario en cualquier página HTML.
+     Para qué: Indicar idioma español (SEO + accesibilidad). -->
+
+<head> 
+<!-- Qué: Contenedor de configuración.
+     Cómo: Aquí van metadatos, estilos, scripts.
+     Por qué: No es contenido visible.
+     Para qué: Configurar comportamiento del sitio. -->
+
+    <meta charset="UTF-8"> 
+    <!-- Qué: Define codificación de caracteres.
+         Cómo: Permite acentos, ñ, símbolos.
+         Por qué: Evita errores de texto raro.
+         Para qué: Soporte completo idioma español. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Qué: Configura responsive.
+         Cómo: Ajusta ancho al dispositivo.
+         Por qué: Sin esto el sitio se ve zoom en móvil.
+         Para qué: Que el juego funcione en celular. -->
+
+    <title>Pokémon Battle Sim</title> 
+    <!-- Qué: Título de la pestaña del navegador.
+         Cómo: Aparece arriba.
+         Por qué: Identificación del sitio.
+         Para qué: UX + SEO. -->
+
+    <link rel="stylesheet" href="style.css"> 
+    <!-- Qué: Conecta archivo CSS externo.
+         Cómo: Carga estilos.
+         Por qué: Separar diseño de estructura.
+         Para qué: Mantener código limpio. -->
+
+</head>
+
+<body> 
+<!-- Qué: Contenido visible.
+     Cómo: Todo lo que ve el usuario.
+     Por qué: Parte principal del DOM.
+     Para qué: Renderizar el juego. -->
+
+    <div class="container"> 
+    <!-- Qué: Contenedor principal del juego.
+         Cómo: Agrupa todos los elementos.
+         Por qué: Facilita centrado y diseño.
+         Para qué: Crear layout tipo panel. -->
+
+        <h1>Pokémon Battle</h1> 
+        <!-- Qué: Título grande.
+             Cómo: Elemento semántico.
+             Por qué: Jerarquía visual.
+             Para qué: Mostrar nombre del juego. -->
+
+        <!-- Pantalla de selección -->
+        <div id="selection-screen" class="screen"> 
+        <!-- Qué: Pantalla inicial.
+             Cómo: Contenedor independiente.
+             Por qué: Permite ocultar/mostrar.
+             Para qué: Elegir Pokémon. -->
+
+            <div class="inputs"> 
+            <!-- Qué: Agrupa inputs.
+                 Cómo: Wrapper visual.
+                 Por qué: Ordenar layout.
+                 Para qué: UX. -->
+
+                <input type="text" id="p1-input" placeholder="Nombre Pokémon 1 (ej. pikachu)"> 
+                <!-- Qué: Campo texto jugador 1.
+                     Cómo: Input HTML.
+                     Por qué: Usuario escribe nombre.
+                     Para qué: Buscar Pokémon en API. -->
+
+                <input type="text" id="p2-input" placeholder="Nombre Pokémon 2 (ej. charizard)"> 
+                <!-- Igual que arriba pero jugador 2 -->
+            </div>
+
+            <button id="start-btn">¡Comenzar Batalla!</button> 
+            <!-- Qué: Botón iniciar juego.
+                 Cómo: Evento click en JS.
+                 Por qué: Disparar lógica batalla.
+                 Para qué: Comenzar simulación. -->
+        </div>
+
+        <!-- Pantalla de batalla -->
+        <div id="battle-screen" class="screen hidden"> 
+        <!-- Qué: Pantalla combate.
+             Cómo: Tiene clase hidden inicialmente.
+             Por qué: No debe verse antes de empezar.
+             Para qué: Mostrar cartas y ataques. -->
+
+            <div class="battle-arena"> 
+            <!-- Qué: Zona visual combate.
+                 Cómo: Flexbox en CSS.
+                 Por qué: Colocar Pokémon frente a frente.
+                 Para qué: Simular arena. -->
+
+                <!-- Carta Pokémon 1 -->
+                <div class="poke-card" id="card-0"> 
+                <!-- Qué: Tarjeta visual del Pokémon.
+                     Cómo: Panel UI.
+                     Por qué: Agrupar info del Pokémon.
+                     Para qué: Mostrar stats. -->
+
+                    <h2 id="name-0">---</h2> 
+                    <!-- Qué: Nombre Pokémon.
+                         Cómo: JS lo actualiza.
+                         Por qué: Placeholder inicial.
+                         Para qué: Mostrar nombre real. -->
+
+                    <div class="hp-bar-container"> 
+                    <!-- Qué: Contenedor barra vida.
+                         Cómo: Caja gris.
+                         Por qué: Base visual.
+                         Para qué: Mostrar progreso. -->
+
+                        <div class="hp-bar" id="hp-fill-0" style="width: 100%;"></div> 
+                        <!-- Qué: Barra verde.
+                             Cómo: JS cambia width.
+                             Por qué: Representa HP.
+                             Para qué: Feedback visual combate. -->
+                    </div>
+
+                    <p><span id="hp-text-0">100</span>% HP</p> 
+                    <!-- Qué: Texto vida.
+                         Cómo: JS cambia número.
+                         Por qué: Precisión numérica.
+                         Para qué: Saber HP exacto. -->
+
+                    <img id="img-0" src="" alt=""> 
+                    <!-- Qué: Imagen Pokémon.
+                         Cómo: JS asigna URL.
+                         Por qué: Visualizar personaje.
+                         Para qué: UX gamer. -->
+                </div>
+
+                <div class="vs">VS</div> 
+                <!-- Qué: Texto VS.
+                     Cómo: Elemento decorativo.
+                     Por qué: Indicar combate.
+                     Para qué: Estética. -->
+
+                <!-- Carta Pokémon 2 (igual lógica) -->
+                <div class="poke-card" id="card-1">
+                    <h2 id="name-1">---</h2>
+                    <div class="hp-bar-container">
+                        <div class="hp-bar" id="hp-fill-1" style="width: 100%;"></div>
+                    </div>
+                    <p><span id="hp-text-1">100</span>% HP</p>
+                    <img id="img-1" src="" alt="">
+                </div>
+            </div>
+
+            <!-- Controles -->
+            <div class="controls"> 
+            <!-- Qué: Panel de acciones.
+                 Cómo: Agrupa botones.
+                 Por qué: Organización UI.
+                 Para qué: Permitir jugar. -->
+
+                <h3 id="turn-indicator">Turno de: ...</h3> 
+                <!-- Qué: Texto turno actual.
+                     Cómo: JS lo cambia.
+                     Por qué: Saber quién juega.
+                     Para qué: Mecánica turnos. -->
+
+                <div class="actions"> 
+                <!-- Qué: Contenedor botones.
+                     Cómo: Agrupación visual.
+                     Por qué: Layout ordenado.
+                     Para qué: UX. -->
+
+                    <button id="attack-btn" onclick="executeAction('attack')">Atacar</button> 
+                    <!-- Ataque normal -->
+
+                    <button id="special-at-btn" onclick="executeAction('special-attack')">
+                        Ataque Especial (3t)
+                    </button> 
+                    <!-- Ataque fuerte con cooldown -->
+
+                    <button id="special-df-btn" onclick="executeAction('special-defense')">
+                        Defensa Especial (2t)
+                    </button> 
+                    <!-- Defensa que reduce daño -->
+                </div>
+
+                <div id="battle-log"></div> 
+                <!-- Qué: Consola combate.
+                     Cómo: JS agrega mensajes.
+                     Por qué: Historial acciones.
+                     Para qué: Feedback jugador. -->
+            </div>
+        </div>
+
+        <!-- Pantalla ganador -->
+        <div id="winner-screen" class="screen hidden"> 
+        <!-- Qué: Pantalla final.
+             Cómo: Oculta hasta terminar.
+             Por qué: Mostrar resultado.
+             Para qué: UX cierre juego. -->
+
+            <h1 class="winner-label">¡GANADOR!</h1> 
+            <!-- Texto épico -->
+
+            <h2 id="winner-name"></h2> 
+            <!-- Nombre ganador dinámico -->
+
+            <img id="winner-img" src="" alt="Ganador"> 
+            <!-- Imagen ganador -->
+
+            <button onclick="location.reload()">Jugar de nuevo</button> 
+            <!-- Recarga página para reiniciar -->
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+    <!-- Conecta lógica del juego -->
+</body>
+</html>

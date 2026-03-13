@@ -1,0 +1,285 @@
+body {
+    font-family: 'Courier New', Courier, monospace; 
+    /* Qué: Define la tipografía del sitio.
+       Cómo: Usa una lista de fuentes tipo consola.
+       Por qué: Da estilo tipo videojuego / retro.
+       Para qué: Mejorar estética del simulador Pokémon. */
+
+    background-color: #f0f0f0; 
+    /* Qué: Color de fondo gris claro.
+       Cómo: Se aplica a todo el body.
+       Por qué: Reduce contraste visual fuerte.
+       Para qué: Hacer que el contenedor blanco resalte. */
+
+    display: flex; 
+    /* Qué: Activa Flexbox.
+       Cómo: Convierte al body en contenedor flexible.
+       Por qué: Permite centrar elementos fácilmente.
+       Para qué: Centrar toda la app en pantalla. */
+
+    justify-content: center; 
+    /* Qué: Centra horizontalmente los hijos.
+       Cómo: Distribuye espacio sobrante.
+       Por qué: UX más limpia.
+       Para qué: Que el juego esté centrado. */
+
+    padding: 20px; 
+    /* Qué: Espacio interno del body.
+       Cómo: Añade margen interior.
+       Por qué: Evita que el contenido toque bordes.
+       Para qué: Mejor visual en pantallas pequeñas. */
+}
+
+.container {
+    background: white; 
+    /* Qué: Fondo blanco.
+       Cómo: Color sólido.
+       Por qué: Contraste con fondo gris.
+       Para qué: Simular tarjeta de juego. */
+
+    padding: 20px; 
+    /* Qué: Espacio interno.
+       Cómo: Empuja contenido hacia adentro.
+       Por qué: Evita que texto quede pegado.
+       Para qué: Mejor legibilidad. */
+
+    border-radius: 10px; 
+    /* Qué: Bordes redondeados.
+       Cómo: Radio de curvatura.
+       Por qué: Diseño moderno.
+       Para qué: Simular panel UI videojuego. */
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+    /* Qué: Sombra.
+       Cómo: Offset vertical + blur.
+       Por qué: Genera profundidad.
+       Para qué: Separar visualmente del fondo. */
+
+    width: 100%; 
+    /* Qué: Ocupa todo el ancho disponible.
+       Cómo: Se adapta al padre.
+       Por qué: Responsivo.
+       Para qué: Funcionar en móviles. */
+
+    max-width: 800px; 
+    /* Qué: Limita ancho máximo.
+       Cómo: No puede crecer más.
+       Por qué: Evita que se vea estirado.
+       Para qué: Mejor experiencia desktop. */
+
+    text-align: center; 
+    /* Qué: Centra texto.
+       Cómo: Alineación horizontal.
+       Por qué: UI tipo juego.
+       Para qué: Orden visual. */
+}
+
+.hidden { 
+    display: none; 
+    /* Qué: Oculta elementos.
+       Cómo: Los elimina del layout.
+       Por qué: Manejar pantallas del juego.
+       Para qué: Cambiar entre selección/batalla/ganador. */
+}
+
+.battle-arena {
+    display: flex; 
+    /* Qué: Layout flexible.
+       Cómo: Coloca cartas en fila.
+       Por qué: Facilita alineación.
+       Para qué: Simular arena de combate. */
+
+    justify-content: space-around; 
+    /* Qué: Distribuye espacio uniforme.
+       Cómo: Empuja cartas a extremos.
+       Por qué: Visual de enfrentamiento.
+       Para qué: Crear sensación VS. */
+
+    align-items: center; 
+    /* Qué: Centra vertical.
+       Cómo: Alinea eje cruzado.
+       Por qué: Balance visual.
+       Para qué: Que cartas estén alineadas. */
+
+    margin-top: 20px; 
+    /* Qué: Espacio arriba.
+       Cómo: Separación externa.
+       Por qué: No pegar al título.
+       Para qué: Mejor jerarquía visual. */
+}
+
+.poke-card {
+    width: 200px; 
+    /* Qué: Ancho fijo.
+       Cómo: Tamaño constante.
+       Por qué: Uniformidad.
+       Para qué: Simular tarjeta Pokémon. */
+
+    padding: 10px; 
+    /* Qué: Espacio interno.
+       Cómo: Aire alrededor del contenido.
+       Por qué: Mejor lectura.
+       Para qué: Estética. */
+
+    border: 2px solid #333; 
+    /* Qué: Borde oscuro.
+       Cómo: Línea sólida.
+       Por qué: Delimitar tarjeta.
+       Para qué: Efecto panel. */
+
+    border-radius: 8px; 
+    /* Qué: Bordes redondeados.
+       Cómo: Curvatura.
+       Por qué: Diseño moderno.
+       Para qué: UI amigable. */
+}
+
+.hp-bar-container {
+    width: 100%; 
+    /* Qué: Barra ocupa todo ancho.
+       Cómo: Relativa al padre.
+       Por qué: Proporcional.
+       Para qué: Visualizar vida correctamente. */
+
+    height: 20px; 
+    /* Qué: Altura barra.
+       Cómo: Tamaño fijo.
+       Por qué: Fácil de ver.
+       Para qué: UX combate. */
+
+    background: #eee; 
+    /* Qué: Fondo gris claro.
+       Cómo: Color base.
+       Por qué: Diferenciar barra de vida.
+       Para qué: Mostrar progreso. */
+
+    border: 1px solid #333; 
+    /* Qué: Borde.
+       Cómo: Delimitación.
+       Por qué: Más contraste.
+       Para qué: Mejor visual. */
+
+    margin-bottom: 5px; 
+    /* Qué: Separación inferior.
+       Cómo: Espacio externo.
+       Por qué: No pegar texto.
+       Para qué: Orden. */
+}
+
+.hp-bar {
+    height: 100%; 
+    /* Qué: Altura igual al contenedor.
+       Cómo: Hereda tamaño.
+       Por qué: Llenar barra.
+       Para qué: Mostrar vida. */
+
+    background: #4caf50; 
+    /* Qué: Color verde.
+       Cómo: Color sólido.
+       Por qué: Verde = salud.
+       Para qué: Indicador intuitivo. */
+
+    transition: width 0.5s ease; 
+    /* Qué: Animación.
+       Cómo: Suaviza cambio de ancho.
+       Por qué: Feedback visual.
+       Para qué: Hacer combate más dinámico. */
+}
+
+img { 
+    width: 150px; 
+    /* Qué: Ancho fijo imagen.
+       Cómo: Escala.
+       Por qué: Uniformidad.
+       Para qué: Cartas iguales. */
+
+    height: 150px; 
+    /* Qué: Alto fijo.
+       Cómo: Mantiene proporción.
+       Por qué: Diseño consistente.
+       Para qué: UI limpia. */
+}
+
+#battle-log {
+    height: 100px; 
+    /* Qué: Altura fija.
+       Cómo: Limita tamaño.
+       Por qué: Evita crecer infinito.
+       Para qué: Zona consola. */
+
+    overflow-y: auto; 
+    /* Qué: Scroll vertical.
+       Cómo: Aparece cuando se llena.
+       Por qué: Mantener layout.
+       Para qué: Leer historial. */
+
+    background: #222; 
+    /* Qué: Fondo oscuro.
+       Cómo: Color sólido.
+       Por qué: Estilo consola.
+       Para qué: Tema gamer. */
+
+    color: #0f0; 
+    /* Qué: Texto verde.
+       Cómo: Color fuente.
+       Por qué: Simular terminal.
+       Para qué: Log de combate. */
+
+    padding: 10px; 
+    /* Qué: Espacio interno.
+       Cómo: Aire visual.
+       Por qué: Mejor lectura.
+       Para qué: UX. */
+
+    margin-top: 15px; 
+    /* Qué: Separación superior.
+       Cómo: Espacio externo.
+       Por qué: No pegar botones.
+       Para qué: Orden visual. */
+
+    text-align: left; 
+    /* Qué: Alinea texto izquierda.
+       Cómo: Cambia alineación.
+       Por qué: Estilo consola real.
+       Para qué: Legibilidad. */
+
+    font-size: 0.9em; 
+    /* Qué: Tamaño ligeramente menor.
+       Cómo: Escala relativa.
+       Por qué: Diferenciar del resto.
+       Para qué: Log secundario. */
+}
+
+.actions button {
+    padding: 10px; 
+    /* Qué: Espacio interno botón.
+       Cómo: Hace botón más grande.
+       Por qué: Fácil click.
+       Para qué: UX combate. */
+
+    margin: 5px; 
+    /* Qué: Separación entre botones.
+       Cómo: Espacio externo.
+       Por qué: Evitar amontonamiento.
+       Para qué: Orden visual. */
+
+    cursor: pointer; 
+    /* Qué: Cambia cursor a mano.
+       Cómo: Feedback interactivo.
+       Por qué: Indicar clickeable.
+       Para qué: UX. */
+}
+
+.winner-label {
+    color: #e91e63; 
+    /* Qué: Color rosa fuerte.
+       Cómo: Color fuente.
+       Por qué: Llamar atención.
+       Para qué: Celebrar ganador. */
+
+    font-size: 3em; 
+    /* Qué: Texto grande.
+       Cómo: Escala tipográfica.
+       Por qué: Jerarquía visual.
+       Para qué: Momento épico. */
+}
